@@ -34,6 +34,7 @@ public class StudentService {
 //    methods
     public void addStudent(Student student) {
         studentRepository.save(student);
+
     }
 
     public List<Student> getAllStudents() {
