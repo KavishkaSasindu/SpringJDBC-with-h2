@@ -6,6 +6,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @SpringBootApplication
 public class SpringJdbcApplication {
 
@@ -20,6 +23,9 @@ public class SpringJdbcApplication {
 		// student service for add student
 		StudentService studentService = context.getBean(StudentService.class);
 		studentService.addStudent(student);
+
+		List<Student> studentList = new ArrayList<Student>();
+		studentList = studentService.getAllStudents();
 
 	}
 
