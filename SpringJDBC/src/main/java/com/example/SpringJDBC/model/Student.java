@@ -1,5 +1,10 @@
-package com.example.SpringJDBC;
+package com.example.SpringJDBC.model;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("prototype")
 public class Student {
 
     private int rollNo;
@@ -38,5 +43,14 @@ public class Student {
 
     public void setMarks(int marks) {
         this.marks = marks;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNo=" + rollNo +
+                ", sName='" + sName + '\'' +
+                ", marks=" + marks +
+                '}';
     }
 }
